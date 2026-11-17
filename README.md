@@ -84,8 +84,19 @@ Com os dados cadastrados, consegui consultar os valores de faturamento, recebime
 | Total de despesas | R$ 33.950,00 |
 | Despesas pagas | R$ 7.270,00 |
 | Despesas pendentes | R$ 26.680,00 |
-
 Todos os dados utilizados são fictícios e foram criados para desenvolver o projeto e praticar SQL.
+
+## Testes e validação
+
+Após a criação das tabelas e inserção dos dados, foi realizado um teste em um novo banco de dados para verificar se os scripts funcionavam corretamente desde o início.
+Também foram realizadas consultas utilizando `JOIN` para conferir os relacionamentos entre as tabelas, como:
+
+- Pacientes e atendimentos;
+- Atendimentos e faturamentos;
+- Faturamentos e recebimentos;
+- Profissionais e atividades.
+
+As 13 tabelas foram verificadas e apresentaram as quantidades de registros esperadas.
 
 ## Aprendizado
 
