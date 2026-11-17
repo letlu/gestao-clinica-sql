@@ -1,18 +1,25 @@
-# Gestão de Clínica - SQL
+# Gestão e Faturamento de Clínica - SQL
 
 ## Sobre o projeto
-Esse projeto foi criado para praticar SQL e desenvolver um banco de dados que simula o funcionamento de uma clínica. O banco disponibilizado possui apenas dados fictícios, criados para preservar a privacidade e seguir os princípios da LGPD.
-A ideia foi organizar informações de pacientes, profissionais, procedimentos, convênios, atendimentos e também a parte financeira, incluindo faturamentos, recebimentos e despesas.
-Fui construindo o banco aos poucos, criando as tabelas, relacionando as informações e inserindo dados fictícios para conseguir praticar consultas e entender melhor como tudo funciona na prática.
+
+Comecei esse projeto em fevereiro de 2026, pensando em uma forma de me ajudar no meu trabalho como faturista de clínica e também de colocar em prática o que estava aprendendo na faculdade.
+
+No meu trabalho preciso acompanhar o faturamento que é lançado, os valores de consultas e exames e também as metas que são cobradas. Então tive a ideia de criar um banco de dados onde pudesse organizar essas informações e ter um controle melhor dos valores.
+
+Também queria ir além do que estava aprendendo nas aulas, conhecer melhor o SQL e entender como funciona o desenvolvimento de um banco de dados na prática. Por isso, fui criando as tabelas, fazendo os relacionamentos, inserindo informações e testando consultas conforme o projeto foi crescendo.
+
+Em novembro de 2026, fiz algumas alterações para conseguir compartilhar o projeto no GitHub. Substituí os dados reais por dados fictícios, mas mantive a estrutura e as regras que fazem parte do funcionamento de uma clínica.
+A ideia é continuar utilizando o banco para me auxiliar no trabalho e também continuar aprendendo e melhorando o projeto conforme avanço nos meus estudos.
 
 ## Ferramentas utilizadas
 
-- PostgreSQL
-- DBeaver
-- SQL
+- **PostgreSQL**
+- **DBeaver**
+- **SQL**
 
 ## Tabelas do banco
-O banco possui 13 tabelas:
+
+O banco possui **13 tabelas**:
 
 - Pacientes
 - Profissionais
@@ -28,7 +35,7 @@ O banco possui 13 tabelas:
 - Despesas
 - Categoria_despesas
 
-## Algumas regras consideradas no projeto
+## Algumas **regras** consideradas no projeto
 
 - Toda consulta precisa ter uma pré-consulta, com bioimpedância, glicose e oximetria.
 - Cada procedimento é relacionado ao profissional responsável.
@@ -42,21 +49,23 @@ O banco possui 13 tabelas:
 
 ## O que pratiquei com SQL
 
-Durante o projeto, pratiquei:
-- SELECT, WHERE e ORDER BY
-- DISTINCT e LIKE
-- INNER JOIN e LEFT JOIN
-- GROUP BY e HAVING
-- COUNT e SUM
-- CASE WHEN
-- COALESCE
-- Subconsultas e NOT EXISTS
+Durante o desenvolvimento, fui praticando alguns comandos e conceitos:
+
+- **SELECT**, **WHERE** e **ORDER BY**
+- **DISTINCT** e **LIKE**
+- **INNER JOIN** e **LEFT JOIN**
+- **GROUP BY** e **HAVING**
+- **COUNT** e **SUM**
+- **CASE WHEN**
+- **COALESCE**
+- Subconsultas e **NOT EXISTS**
 - Relacionamentos entre tabelas
-- Consultas para conferir valores e identificar informações
+- Consultas para conferir valores e buscar informações
 
 ## Dados cadastrados
 
-Até o momento, o banco possui:
+Até o momento, cadastrei:
+
 | Informação | Quantidade |
 |---|---:|
 | Pacientes | 20 |
@@ -74,7 +83,7 @@ Até o momento, o banco possui:
 
 ## Resultados das consultas
 
-Com os dados cadastrados, consegui consultar os valores de faturamento, recebimentos e despesas da clínica.
+Também fiz consultas para acompanhar os valores de faturamento, recebimentos e despesas da clínica.
 
 | Descrição | Valor |
 |---|---:|
@@ -84,22 +93,19 @@ Com os dados cadastrados, consegui consultar os valores de faturamento, recebime
 | Total de despesas | R$ 33.950,00 |
 | Despesas pagas | R$ 7.270,00 |
 | Despesas pendentes | R$ 26.680,00 |
+
 Todos os dados utilizados são fictícios e foram criados para desenvolver o projeto e praticar SQL.
 
 ## Testes e validação
 
-Após a criação das tabelas e inserção dos dados, foi realizado um teste em um novo banco de dados para verificar se os scripts funcionavam corretamente desde o início.
-Também foram realizadas consultas utilizando `JOIN` para conferir os relacionamentos entre as tabelas, como:
-
-- Pacientes e atendimentos;
-- Atendimentos e faturamentos;
-- Faturamentos e recebimentos;
-- Profissionais e atividades.
-
-As 13 tabelas foram verificadas e apresentaram as quantidades de registros esperadas.
+Depois de criar as tabelas e inserir os dados, resolvi testar se outra pessoa conseguiria montar o banco do zero utilizando os arquivos disponíveis no repositório.
+Para isso, criei um novo banco de dados e executei os dois scripts. Tudo funcionou corretamente e as 13 tabelas ficaram com as quantidades de registros esperadas.
+Também fiz algumas consultas com **JOIN** para conferir se os relacionamentos estavam funcionando, como entre pacientes e atendimentos, faturamentos e recebimentos, e profissionais e atividades.
 
 ## Aprendizado
 
-Esse projeto tem me ajudado no dia a dia do trabalho e é uma forma de colocar em prática o que venho estudando sobre banco de dados.
+Esse projeto tem me ajudado a colocar em prática o que venho estudando sobre banco de dados e também tem relação com algumas situações que encontro no meu dia a dia de trabalho.
 
 Além de aprender a criar tabelas e fazer consultas, estou entendendo melhor como relacionar informações, trabalhar com regras de negócio e utilizar SQL para conferir dados e gerar informações que podem ajudar no acompanhamento de uma empresa.
+
+Ainda pretendo continuar desenvolvendo e melhorando o projeto conforme for aprendendo mais.
