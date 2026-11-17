@@ -118,6 +118,12 @@ Depois de criar as tabelas e inserir os dados, resolvi testar se outra pessoa co
 Para isso, criei um novo banco de dados e executei os dois scripts. Tudo funcionou corretamente e as 13 tabelas ficaram com as quantidades de registros esperadas.
 Também fiz algumas consultas com **JOIN** para conferir se os relacionamentos estavam funcionando, como entre pacientes e atendimentos, faturamentos e recebimentos, e profissionais e atividades.
 
+## Diagrama Entidade-Relacionamento (DER)
+
+O diagrama mostra como as tabelas do banco de dados estão relacionadas.
+
+![Diagrama Entidade-Relacionamento](der-clinica.png)
+
 ## Aprendizado
 
 Esse projeto tem me ajudado a colocar em prática o que venho estudando sobre banco de dados e também tem relação com algumas situações que encontro no meu dia a dia de trabalho.
