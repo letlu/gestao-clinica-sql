@@ -62,6 +62,22 @@ Durante o desenvolvimento, fui praticando alguns comandos e conceitos:
 - Relacionamentos entre tabelas
 - Consultas para conferir valores e buscar informações
 
+## Consultas analíticas
+
+Criei um arquivo separado com consultas para analisar algumas informações do banco, como:
+
+- Faturamento total por mês.
+- Faturamento por convênio.
+- Comparação entre valores enviados e recebidos.
+- Identificação de recebimentos parciais ou pendentes.
+- Quantidade de atendimentos por tipo.
+- Faturamento por procedimento.
+- Despesas por categoria.
+- Despesas pagas e pendentes.
+- Comparação entre valores recebidos e despesas pagas.
+- Faturamento por profissional.
+- Quantidade de procedimentos ativos e inativos.
+
 ## Dados cadastrados
 
 Até o momento, cadastrei:
