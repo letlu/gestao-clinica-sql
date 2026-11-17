@@ -1,1 +1,1390 @@
---
+-- Inserção dos dados fictícios do projeto
+
+INSERT INTO public.pacientes (id,cpf,nome,data_nascimento,ativo) VALUES
+	 (1,'10000000001','Mariana Costa','1990-05-12',true),
+	 (2,'10000000002','Pedro Almeida','1985-09-23',true),
+	 (3,'10000000003','Camila Ferreira','1998-02-17',true),
+	 (4,'10000000004','Rafael Martins','1979-11-08',true),
+	 (5,'10000000005','Juliana Ribeiro','1992-07-30',true),
+	 (6,'10000000006','Lucas Oliveira','1988-03-14',true),
+	 (7,'10000000007','Fernanda Souza','1995-12-02',true),
+	 (8,'10000000008','Gabriel Santos','1982-06-19',true),
+	 (9,'10000000009','Patricia Lima','1975-01-25',true),
+	 (10,'10000000010','Bruno Carvalho','1993-10-11',true);
+INSERT INTO public.pacientes (id,cpf,nome,data_nascimento,ativo) VALUES
+	 (11,'10000000011','Amanda Rodrigues','1987-04-06',true),
+	 (12,'10000000012','Thiago Gomes','2000-08-21',true),
+	 (13,'10000000013','Beatriz Nunes','1996-09-15',true),
+	 (14,'10000000014','Eduardo Barros','1978-12-27',true),
+	 (15,'10000000015','Carolina Mendes','1991-02-09',true),
+	 (16,'10000000016','Felipe Araujo','1984-07-18',true),
+	 (17,'10000000017','Larissa Cardoso','1999-05-03',true),
+	 (18,'10000000018','Diego Moreira','1980-10-29',true),
+	 (19,'10000000019','Isabela Teixeira','1994-03-22',true),
+	 (20,'10000000020','André Castro','1989-06-13',true);
+
+INSERT INTO public.profissionais (id,nome,cpf,registro_profissional,ativo) VALUES
+	 (1,'Ana Paula Mendes','20000000001','CRM-20001',true),
+	 (2,'Ricardo Oliveira','20000000002','CRM-20002',true),
+	 (3,'Juliana Martins','20000000003','CRM-20003',true),
+	 (4,'Carlos Eduardo Lima','20000000004','CRN-40001',true),
+	 (5,'Fernanda Costa','20000000005','CRM-20004',true),
+	 (6,'Marcos Ribeiro','20000000006','CRM-20005',true),
+	 (7,'Patricia Souza','20000000007','COREN-50001',true),
+	 (8,'Gabriel Ferreira','20000000008','COREN-50002',true),
+	 (9,'Camila Rodrigues','20000000009','COREN-50003',true),
+	 (10,'Roberto Almeida','20000000010','COREN-50004',true);
+INSERT INTO public.profissionais (id,nome,cpf,registro_profissional,ativo) VALUES
+	 (11,'Mariana Gomes','20000000011',NULL,true),
+	 (12,'Felipe Santos','20000000012','CRM-20006',true),
+	 (13,'Beatriz Carvalho','20000000013','CRM-20007',true),
+	 (14,'Daniela Nunes','20000000014','COREN-50005',true),
+	 (15,'Eduardo Martins','20000000015','CRN-40002',true);
+
+INSERT INTO public.atividades (id,nome,descricao,ativo) VALUES
+	 (1,'Endocrinologia','Atendimentos médicos em endocrinologia',true),
+	 (2,'Angiologia','Atendimentos médicos em angiologia',true),
+	 (3,'Cirurgia vascular','Atendimentos médicos em cirurgia vascular',true),
+	 (4,'Nutrição','Atendimentos nutricionais',true),
+	 (5,'Cardiologia','Atendimentos médicos em cardiologia',true),
+	 (6,'Reumatologia','Atendimentos médicos em reumatologia',true),
+	 (7,'Enfermagem - Curativos','Realização de curativos',true),
+	 (8,'Enfermagem - Screening','Realização de screening',true),
+	 (9,'Enfermagem - MAPA e Holter','Instalação e acompanhamento de MAPA e Holter',true),
+	 (10,'Enfermagem - Aplicação de medicamentos','Aplicação de medicamentos',true);
+INSERT INTO public.atividades (id,nome,descricao,ativo) VALUES
+	 (11,'Estagiários de enfermagem - Pré-consulta','Apoio na realização de pré-consultas',true),
+	 (12,'Estagiários de enfermagem - Exames básicos','Realização de bioimpedância, glicose e oximetria',true);
+
+INSERT INTO public.procedimentos (id,nome,descricao,valor_particular,ativo) VALUES
+	 (1,'Consulta - Cardiologia','Consulta médica em cardiologia',300.00,true),
+	 (2,'Consulta - Endocrinologia','Consulta médica em endocrinologia',450.00,true),
+	 (3,'Consulta - Angiologia','Consulta médica em angiologia',250.00,true),
+	 (4,'Consulta - Cirurgia vascular','Consulta médica em cirurgia vascular',200.00,true),
+	 (5,'Consulta - Nutrição','Consulta com nutricionista',200.00,true),
+	 (6,'Bioimpedância','Avaliação da composição corporal',150.00,true),
+	 (7,'Glicose','Verificação da glicose',10.00,true),
+	 (8,'Oximetria','Verificação da saturação de oxigênio',20.00,true),
+	 (9,'Doppler arterial','Exame de avaliação do fluxo sanguíneo arterial',400.00,true),
+	 (10,'Doppler venoso','Exame de avaliação do fluxo sanguíneo venoso',400.00,true);
+INSERT INTO public.procedimentos (id,nome,descricao,valor_particular,ativo) VALUES
+	 (11,'Ecodopplercardiograma','Exame de avaliação da estrutura e função cardíaca',300.00,true),
+	 (12,'Screening','Exame de screening',100.00,true),
+	 (13,'Curativos','Realização de curativos',200.00,true),
+	 (14,'Injetáveis','Aplicação de medicamentos injetáveis',200.00,true);
+
+INSERT INTO public.convenios (id,nome,prazo_analise_dias,ativo,valor,tabela,valor_filme_m2) VALUES
+	 (1,'AFEB BRASAL',NULL,true,147.72,'AMB/92',29.96),
+	 (2,'AFFEGO',NULL,true,112.87,'CBHPM',30.07),
+	 (3,'ANAFE SAÚDE',NULL,true,104.00,'CBHPM',25.79),
+	 (4,'BACEN',NULL,true,116.25,'TUSS',36.42),
+	 (5,'BRB (SAÚDE BRB)',NULL,true,118.12,'TUSS',24.72),
+	 (6,'CAEME - GO',NULL,true,112.26,'CBHPM',38.60),
+	 (7,'CAESAN',NULL,true,125.00,'CBHPM',25.79),
+	 (8,'CAMED',NULL,true,162.21,'CBHPM',35.77),
+	 (9,'CARE PLUS',NULL,true,121.30,'CBHPM 2012',34.75),
+	 (10,'CASEC (CODEVASF)',NULL,true,111.16,'CBHPM',36.88);
+INSERT INTO public.convenios (id,nome,prazo_analise_dias,ativo,valor,tabela,valor_filme_m2) VALUES
+	 (11,'CASEMBRAPA (EMBRAPA)',NULL,true,110.45,'CBHPM 2012',23.37),
+	 (12,'CBMDF',NULL,true,120.64,'TUSS',25.79),
+	 (14,'CNTI',NULL,true,138.68,'AMB/92',24.94),
+	 (15,'CONAB',NULL,true,119.50,'CBHPM',31.03),
+	 (16,'EMBRATEL (TELOS)',NULL,true,117.44,'CBHPM 5ª (2009)',42.17),
+	 (17,'FAPES (BNDES)',NULL,true,131.03,'CBHPM',40.49),
+	 (18,'FASCAL',NULL,true,121.34,'TUSS',40.49),
+	 (19,'GDF SAÚDE',NULL,true,95.35,'TUSS',NULL),
+	 (20,'GEAP',NULL,true,91.03,'TUSS',NULL),
+	 (21,'GRAVIA',NULL,true,111.92,'AMB/92',39.71);
+INSERT INTO public.convenios (id,nome,prazo_analise_dias,ativo,valor,tabela,valor_filme_m2) VALUES
+	 (22,'LIFE EMPRESARIAL',NULL,true,109.97,'CBHPM 5ª (2009)',42.21),
+	 (23,'LUMINAR SAÚDE (EVIDA)',NULL,true,111.47,'TUSS',28.13),
+	 (24,'NOTRE DAME',NULL,true,96.00,'CBHPM 2010',23.54),
+	 (25,'OMINT SAÚDE',NULL,true,107.52,'TUSS',25.65),
+	 (26,'PF SAÚDE (POLÍCIA FEDERAL)',NULL,true,107.25,'TUSS',34.92),
+	 (27,'PLAN ASSISTE (MPU)',NULL,true,121.34,'TUSS',40.49),
+	 (28,'PLAS/JMU (STM)',NULL,true,121.34,'TUSS',40.49),
+	 (29,'PMDF - CONSULTAS MÉDICAS',NULL,true,88.29,'CBHPM',25.79),
+	 (30,'PROASA',NULL,true,103.31,'CBHPM',27.02),
+	 (31,'PRÓ-SAÚDE (CÂMARA DOS DEPUTADOS)',NULL,true,121.34,'TABELA PRÓPRIA',40.49);
+INSERT INTO public.convenios (id,nome,prazo_analise_dias,ativo,valor,tabela,valor_filme_m2) VALUES
+	 (32,'PRÓ-SAÚDE (TJDFT)',NULL,true,121.34,'TUSS',40.49),
+	 (33,'PRÓ-SER (STJ)',NULL,true,121.34,'TUSS',40.49),
+	 (34,'PRÓ-SOCIAL (TRF)',NULL,true,121.34,'TUSS',40.49),
+	 (35,'REAL GRANDEZA (DEMAIS PLANOS)',NULL,true,95.00,'CBHPM 5ª (2009)',25.79),
+	 (36,'REAL GRANDEZA (SALVUS E SALUTEM)',NULL,true,85.00,'CBHPM 5ª EDIÇÃO PLENA',25.79),
+	 (37,'SAÚDE CAIXA',NULL,true,104.53,'CBHPM',25.79),
+	 (38,'SAÚDE PETROBRAS',NULL,true,108.50,'CBHPM 5ª (2009)',28.87),
+	 (39,'SERPRO',NULL,true,124.76,'CBHPM',29.49),
+	 (40,'SIS SENADO',NULL,true,111.83,'CBHPM',27.59),
+	 (41,'STF-MED (STF)',NULL,true,121.34,'TUSS',40.49);
+INSERT INTO public.convenios (id,nome,prazo_analise_dias,ativo,valor,tabela,valor_filme_m2) VALUES
+	 (42,'TRE SAÚDE',NULL,true,121.34,'TUSS',40.49),
+	 (43,'TRT SAÚDE',NULL,true,121.34,'TUSS',40.49),
+	 (44,'TST SAÚDE',NULL,true,121.34,'TUSS',NULL),
+	 (45,'UNAFISCO SAÚDE (PREMIUM)',NULL,true,107.63,'TUSS',25.37),
+	 (46,'Particular',NULL,true,NULL,NULL,NULL);
+
+INSERT INTO public.categoria_despesas (id,nome,descricao,ativo) VALUES
+	 (1,'Aluguel','Despesas com locação do imóvel da clínica',true),
+	 (2,'Energia elétrica','Despesas com consumo de energia',true),
+	 (3,'Água','Despesas com abastecimento de água',true),
+	 (4,'Internet e telefone','Despesas com comunicação e internet',true),
+	 (5,'Materiais médicos','Materiais utilizados nos atendimentos em geral',true),
+	 (6,'Materiais para curativos','Gazes, ataduras, luvas e soluções para curativos',true),
+	 (7,'Materiais para injetáveis','Seringas, agulhas e medicamentos utilizados em aplicações',true),
+	 (8,'Salários','Pagamento dos funcionários da clínica',true),
+	 (9,'Encargos trabalhistas','Despesas com encargos e obrigações trabalhistas',true),
+	 (10,'Limpeza','Produtos e serviços de limpeza',true);
+INSERT INTO public.categoria_despesas (id,nome,descricao,ativo) VALUES
+	 (11,'Manutenção','Manutenção de equipamentos e instalações',true),
+	 (12,'Materiais administrativos','Materiais de escritório e uso administrativo',true);
+
+INSERT INTO public.profissional_atividades (profissional_id,atividade_id) VALUES
+	 (1,1),
+	 (2,2),
+	 (3,3),
+	 (4,4),
+	 (5,5),
+	 (6,6),
+	 (7,7),
+	 (7,8),
+	 (8,8),
+	 (8,9);
+INSERT INTO public.profissional_atividades (profissional_id,atividade_id) VALUES
+	 (9,9),
+	 (9,10),
+	 (10,10),
+	 (10,7),
+	 (11,11),
+	 (12,1),
+	 (13,5),
+	 (14,7),
+	 (14,10),
+	 (15,4);
+INSERT INTO public.profissional_atividades (profissional_id,atividade_id) VALUES
+	 (11,12);
+
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (1,1,46,'2026-10-01','Realizado','Consulta - Cardiologia'),
+	 (2,2,1,'2026-10-02','Realizado','Consulta - Cardiologia'),
+	 (3,3,46,'2026-10-03','Realizado','Consulta - Cardiologia'),
+	 (4,4,2,'2026-10-05','Realizado','Consulta - Cardiologia'),
+	 (5,5,46,'2026-10-06','Realizado','Consulta - Cardiologia'),
+	 (6,6,3,'2026-10-07','Realizado','Consulta - Cardiologia'),
+	 (7,7,46,'2026-10-08','Pendente','Consulta - Cardiologia'),
+	 (75,10,46,'2026-11-22','Realizado','Curativo'),
+	 (76,11,27,'2026-11-23','Realizado','Curativo'),
+	 (77,12,46,'2026-11-24','Realizado','Curativo');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (78,13,28,'2026-11-25','Pendente','Curativo'),
+	 (79,14,29,'2026-11-26','Realizado','Curativo'),
+	 (80,15,46,'2026-11-27','Realizado','Curativo'),
+	 (81,16,30,'2026-11-28','Realizado','Curativo'),
+	 (82,17,46,'2026-11-29','Realizado','Curativo'),
+	 (83,18,31,'2026-11-30','Realizado','Curativo'),
+	 (84,19,32,'2026-12-01','Pendente','Curativo'),
+	 (85,20,46,'2026-12-02','Realizado','Curativo'),
+	 (86,1,33,'2026-12-03','Realizado','Injetável'),
+	 (87,2,46,'2026-12-04','Realizado','Injetável');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (88,3,34,'2026-12-05','Cancelado','Injetável'),
+	 (89,4,35,'2026-12-06','Realizado','Injetável'),
+	 (90,5,46,'2026-12-07','Realizado','Injetável'),
+	 (91,6,36,'2026-12-08','Realizado','Injetável'),
+	 (92,7,46,'2026-12-09','Realizado','Injetável'),
+	 (93,8,37,'2026-12-10','Realizado','Injetável'),
+	 (94,9,38,'2026-12-11','Pendente','Injetável'),
+	 (95,10,46,'2026-12-12','Realizado','Injetável'),
+	 (96,11,39,'2026-12-13','Realizado','Injetável'),
+	 (97,12,46,'2026-12-14','Realizado','Injetável');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (98,13,40,'2026-12-15','Realizado','Injetável'),
+	 (99,14,46,'2026-12-16','Cancelado','Injetável'),
+	 (100,15,41,'2026-12-17','Realizado','Injetável'),
+	 (101,16,46,'2026-12-18','Realizado','Consulta - Endocrinologia'),
+	 (102,17,42,'2026-12-19','Realizado','Consulta - Angiologia'),
+	 (103,18,46,'2026-12-20','Pendente','Consulta - Angiologia'),
+	 (104,19,43,'2026-12-21','Realizado','Consulta - Angiologia'),
+	 (105,20,46,'2026-12-22','Realizado','Consulta - Angiologia'),
+	 (106,1,44,'2026-12-23','Realizado','Consulta - Angiologia'),
+	 (107,2,46,'2026-12-24','Realizado','Consulta - Angiologia');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (108,3,45,'2026-12-25','Realizado','Consulta - Angiologia'),
+	 (109,4,46,'2026-12-26','Realizado','Consulta - Angiologia'),
+	 (110,5,1,'2026-12-27','Pendente','Consulta - Cirurgia vascular'),
+	 (111,6,46,'2026-12-28','Realizado','Consulta - Cirurgia vascular'),
+	 (112,7,2,'2026-12-29','Realizado','Consulta - Cirurgia vascular'),
+	 (113,8,46,'2026-12-30','Realizado','Consulta - Cirurgia vascular'),
+	 (114,9,3,'2026-12-31','Realizado','Consulta - Cirurgia vascular'),
+	 (115,10,46,'2027-01-02','Realizado','Consulta - Cirurgia vascular'),
+	 (116,11,4,'2027-01-03','Cancelado','Consulta - Cirurgia vascular'),
+	 (117,12,46,'2027-01-04','Realizado','Consulta - Cirurgia vascular');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (118,13,5,'2027-01-05','Realizado','Consulta - Nutrição'),
+	 (119,14,46,'2027-01-06','Realizado','Consulta - Nutrição'),
+	 (120,15,6,'2027-01-07','Pendente','Consulta - Nutrição'),
+	 (121,16,46,'2027-01-08','Realizado','Consulta - Nutrição'),
+	 (122,17,7,'2027-01-09','Realizado','Consulta - Nutrição'),
+	 (123,18,46,'2027-01-10','Realizado','Consulta - Nutrição'),
+	 (124,19,8,'2027-01-11','Realizado','Consulta - Nutrição'),
+	 (125,20,46,'2027-01-12','Realizado','Consulta - Nutrição'),
+	 (8,8,4,'2026-10-09','Realizado','Consulta - Cardiologia'),
+	 (9,9,46,'2026-10-10','Realizado','Consulta - Endocrinologia');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (10,10,5,'2026-10-12','Realizado','Consulta - Endocrinologia'),
+	 (11,11,46,'2026-10-13','Cancelado','Consulta - Endocrinologia'),
+	 (12,12,6,'2026-10-14','Realizado','Consulta - Endocrinologia'),
+	 (13,13,46,'2026-10-15','Realizado','Consulta - Endocrinologia'),
+	 (14,14,7,'2026-10-16','Pendente','Consulta - Endocrinologia'),
+	 (15,15,46,'2026-10-17','Realizado','Consulta - Endocrinologia'),
+	 (41,16,8,'2026-10-18','Realizado','Exame'),
+	 (42,17,46,'2026-10-19','Realizado','Exame'),
+	 (43,18,9,'2026-10-20','Realizado','Exame'),
+	 (44,19,46,'2026-10-21','Pendente','Exame');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (45,20,10,'2026-10-22','Realizado','Exame'),
+	 (46,1,46,'2026-10-23','Realizado','Exame'),
+	 (47,2,11,'2026-10-24','Realizado','Exame'),
+	 (48,3,46,'2026-10-25','Cancelado','Exame'),
+	 (49,4,12,'2026-10-26','Realizado','Exame'),
+	 (50,5,46,'2026-10-27','Realizado','Exame'),
+	 (51,6,14,'2026-10-28','Realizado','Exame'),
+	 (52,7,46,'2026-10-29','Realizado','Exame'),
+	 (53,8,14,'2026-10-30','Pendente','Exame'),
+	 (54,9,46,'2026-11-01','Realizado','Exame');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (55,10,15,'2026-11-02','Realizado','Exame'),
+	 (56,11,46,'2026-11-03','Realizado','Exame'),
+	 (57,12,16,'2026-11-04','Realizado','Exame'),
+	 (58,13,46,'2026-11-05','Realizado','Exame'),
+	 (59,14,17,'2026-11-06','Cancelado','Exame'),
+	 (60,15,46,'2026-11-07','Realizado','Exame'),
+	 (61,16,18,'2026-11-08','Realizado','Exame'),
+	 (62,17,46,'2026-11-09','Pendente','Exame'),
+	 (63,18,19,'2026-11-10','Realizado','Exame'),
+	 (64,19,46,'2026-11-11','Realizado','Exame');
+INSERT INTO public.atendimentos (id,paciente_id,convenio_id,data_atendimento,status,tipo_atendimento) VALUES
+	 (65,20,20,'2026-11-12','Realizado','Exame'),
+	 (66,1,21,'2026-11-13','Realizado','Exame'),
+	 (67,2,46,'2026-11-14','Realizado','Exame'),
+	 (68,3,22,'2026-11-15','Realizado','Exame'),
+	 (69,4,23,'2026-11-16','Pendente','Exame'),
+	 (70,5,46,'2026-11-17','Realizado','Exame'),
+	 (71,6,24,'2026-11-18','Realizado','Curativo'),
+	 (72,7,46,'2026-11-19','Realizado','Curativo'),
+	 (73,8,25,'2026-11-20','Cancelado','Curativo'),
+	 (74,9,26,'2026-11-21','Realizado','Curativo');
+
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (1,10,1,2,157.06),
+	 (2,12,1,2,143.19),
+	 (3,102,2,3,144.77),
+	 (4,104,2,3,144.77),
+	 (5,106,2,3,144.77),
+	 (6,108,2,3,128.77),
+	 (7,112,3,4,135.06),
+	 (8,114,3,4,95.94),
+	 (9,2,13,1,159.93),
+	 (10,4,13,1,150.07);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (11,6,13,1,106.60),
+	 (12,8,13,1,154.54),
+	 (13,118,4,5,82.37),
+	 (14,122,4,5,63.18),
+	 (15,124,4,5,100.00),
+	 (16,3,13,1,300.00),
+	 (17,101,1,2,450.00),
+	 (18,113,3,4,200.00),
+	 (19,107,2,3,250.00),
+	 (20,115,3,4,200.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (21,119,4,5,200.00),
+	 (22,105,2,3,250.00),
+	 (23,111,3,4,200.00),
+	 (24,5,13,1,300.00),
+	 (25,1,13,1,300.00),
+	 (26,121,4,5,200.00),
+	 (27,13,1,2,450.00),
+	 (28,15,1,2,450.00),
+	 (29,109,2,3,250.00),
+	 (30,123,4,5,200.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (31,125,4,5,200.00),
+	 (32,9,1,2,450.00),
+	 (33,117,3,4,200.00),
+	 (34,124,11,6,60.00),
+	 (35,5,11,6,150.00),
+	 (36,105,11,6,150.00),
+	 (37,118,11,7,4.00),
+	 (38,115,11,8,20.00),
+	 (39,9,11,7,10.00),
+	 (40,113,11,7,10.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (41,13,11,6,150.00),
+	 (42,15,11,8,20.00),
+	 (43,4,11,8,20.00),
+	 (44,125,11,8,20.00),
+	 (45,111,11,6,150.00),
+	 (46,123,11,8,20.00),
+	 (47,1,11,6,150.00),
+	 (48,1,11,8,20.00),
+	 (49,108,11,7,4.00),
+	 (50,123,11,6,150.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (51,125,11,6,150.00),
+	 (52,111,11,8,20.00),
+	 (53,121,11,7,10.00),
+	 (54,4,11,6,60.00),
+	 (55,107,11,7,10.00),
+	 (56,13,11,8,20.00),
+	 (57,15,11,6,150.00),
+	 (58,115,11,6,150.00),
+	 (59,3,11,7,10.00),
+	 (60,112,11,7,4.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (61,105,11,8,20.00),
+	 (62,124,11,8,20.00),
+	 (63,5,11,8,20.00),
+	 (64,5,11,7,10.00),
+	 (65,124,11,7,4.00),
+	 (66,105,11,7,10.00),
+	 (67,112,11,8,20.00),
+	 (68,3,11,8,20.00),
+	 (69,118,11,6,60.00),
+	 (70,107,11,8,20.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (71,13,11,7,10.00),
+	 (72,113,11,6,150.00),
+	 (73,9,11,6,150.00),
+	 (74,111,11,7,10.00),
+	 (75,121,11,8,20.00),
+	 (76,108,11,8,20.00),
+	 (77,1,11,7,10.00),
+	 (78,123,11,7,10.00),
+	 (79,108,11,6,60.00),
+	 (80,4,11,7,4.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (81,121,11,6,150.00),
+	 (82,125,11,7,10.00),
+	 (83,15,11,7,10.00),
+	 (84,107,11,6,150.00),
+	 (85,9,11,8,20.00),
+	 (86,113,11,8,20.00),
+	 (87,118,11,8,20.00),
+	 (88,115,11,7,10.00),
+	 (89,112,11,6,60.00),
+	 (90,3,11,6,150.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (91,106,11,8,20.00),
+	 (92,8,11,8,20.00),
+	 (93,114,11,6,60.00),
+	 (94,2,11,7,4.00),
+	 (95,102,11,7,4.00),
+	 (96,6,11,7,4.00),
+	 (97,104,11,7,4.00),
+	 (98,119,11,8,20.00),
+	 (99,122,11,8,20.00),
+	 (100,117,11,6,150.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (101,10,11,7,4.00),
+	 (102,101,11,8,20.00),
+	 (103,12,11,7,4.00),
+	 (104,101,11,6,150.00),
+	 (105,122,11,6,60.00),
+	 (106,109,11,7,10.00),
+	 (107,117,11,8,20.00),
+	 (108,119,11,6,150.00),
+	 (109,106,11,6,60.00),
+	 (110,8,11,6,60.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (111,114,11,8,20.00),
+	 (112,114,11,7,4.00),
+	 (113,102,11,6,60.00),
+	 (114,6,11,6,60.00),
+	 (115,2,11,6,60.00),
+	 (116,104,11,6,60.00),
+	 (117,117,11,7,10.00),
+	 (118,109,11,8,20.00),
+	 (119,12,11,6,60.00),
+	 (120,10,11,6,60.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (121,101,11,7,10.00),
+	 (122,10,11,8,20.00),
+	 (123,12,11,8,20.00),
+	 (124,109,11,6,150.00),
+	 (125,122,11,7,4.00),
+	 (126,119,11,7,10.00),
+	 (127,104,11,8,20.00),
+	 (128,102,11,8,20.00),
+	 (129,6,11,8,20.00),
+	 (130,2,11,8,20.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (131,8,11,7,4.00),
+	 (132,106,11,7,4.00),
+	 (133,82,7,13,200.00),
+	 (134,71,7,13,230.00),
+	 (135,72,7,13,200.00),
+	 (136,83,7,13,170.00),
+	 (137,77,7,13,200.00),
+	 (138,85,7,13,200.00),
+	 (139,80,7,13,200.00),
+	 (140,76,7,13,190.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (141,81,7,13,150.00),
+	 (142,79,7,13,230.00),
+	 (143,74,7,13,170.00),
+	 (144,75,7,13,200.00),
+	 (145,66,2,11,320.00),
+	 (146,57,2,10,240.00),
+	 (147,64,2,9,400.00),
+	 (148,47,2,11,340.00),
+	 (149,46,2,10,400.00),
+	 (150,56,2,9,400.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (151,65,2,10,240.00),
+	 (152,52,2,9,400.00),
+	 (153,55,2,11,340.00),
+	 (154,68,2,10,255.00),
+	 (155,67,2,9,400.00),
+	 (156,50,2,10,400.00),
+	 (157,51,2,11,330.00),
+	 (158,42,2,10,400.00),
+	 (159,41,2,9,430.00),
+	 (160,54,2,10,400.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (161,58,2,11,300.00),
+	 (162,49,2,9,430.00),
+	 (163,70,2,11,300.00),
+	 (164,45,2,9,460.00),
+	 (165,60,2,9,400.00),
+	 (166,43,2,11,320.00),
+	 (167,61,2,10,255.00),
+	 (168,63,2,11,340.00),
+	 (169,86,9,14,190.00),
+	 (170,89,9,14,220.00);
+INSERT INTO public.atendimento_procedimentos (id,atendimento_id,profissional_id,procedimento_id,valor_cobrado) VALUES
+	 (171,91,9,14,180.00),
+	 (172,93,9,14,190.00),
+	 (173,96,9,14,220.00),
+	 (174,98,9,14,180.00),
+	 (175,100,9,14,190.00),
+	 (176,97,9,14,200.00),
+	 (177,95,9,14,200.00),
+	 (178,92,9,14,200.00),
+	 (179,90,9,14,200.00),
+	 (180,87,9,14,200.00);
+
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (1,1,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (2,1,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (3,1,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (4,2,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (5,2,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (6,2,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (7,3,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (8,3,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (9,3,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (10,4,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (11,4,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (12,4,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (13,5,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (14,5,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (15,5,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (16,6,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (17,6,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (18,6,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (19,7,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (20,7,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (21,7,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (22,8,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (23,8,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (24,8,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (25,9,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (26,9,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (27,9,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (28,10,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (29,10,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (30,10,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (31,11,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (32,11,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (33,11,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (34,12,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (35,12,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (36,12,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (37,14,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (38,14,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (39,14,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (40,15,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (41,15,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (42,15,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (43,16,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (44,16,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (45,16,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (46,17,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (47,17,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (48,17,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (49,18,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (50,18,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (51,18,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (52,19,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (53,19,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (54,19,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (55,20,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (56,20,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (57,20,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (58,21,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (59,21,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (60,21,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (61,22,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (62,22,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (63,22,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (64,23,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (65,23,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (66,23,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (67,24,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (68,24,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (69,24,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (70,25,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (71,25,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (72,25,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (73,26,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (74,26,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (75,26,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (76,27,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (77,27,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (78,27,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (79,28,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (80,28,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (81,28,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (82,29,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (83,29,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (84,29,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (85,30,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (86,30,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (87,30,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (88,31,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (89,31,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (90,31,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (91,32,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (92,32,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (93,32,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (94,33,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (95,33,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (96,33,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (97,34,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (98,34,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (99,34,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (100,35,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (101,35,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (102,35,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (103,36,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (104,36,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (105,36,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (106,37,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (107,37,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (108,37,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (109,38,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (110,38,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (111,38,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (112,39,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (113,39,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (114,39,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (115,40,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (116,40,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (117,40,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (118,41,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (119,41,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (120,41,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (121,42,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (122,42,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (123,42,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (124,43,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (125,43,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (126,43,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (127,44,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão'),
+	 (128,44,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (129,44,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (130,45,6,'Pré-consulta',NULL,NULL,60.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (131,45,7,'Pré-consulta',NULL,NULL,4.00,true,'Padrão'),
+	 (132,45,8,'Pré-consulta',NULL,NULL,20.00,true,'Padrão'),
+	 (133,1,2,'Endocrinologia','NÃO TISS - ATENDIMENTO','00.01.001-4',159.93,true,'Padrão'),
+	 (134,2,2,'Endocrinologia','CONSULTA','1.01.01.01-2',150.07,true,'Padrão'),
+	 (135,3,2,'Endocrinologia','CONSULTA','1.01.01.01-2',106.60,true,'Padrão'),
+	 (136,4,2,'Endocrinologia','CONSULTA','1.01.01.403',154.54,true,'Padrão'),
+	 (137,5,2,'Endocrinologia','CONSULTA','1.01.01.01-2',157.06,true,'Padrão'),
+	 (138,6,2,'Endocrinologia','CONSULTA','1.01.01.01-2',143.19,true,'Padrão'),
+	 (139,7,2,'Endocrinologia','CONSULTA','10.10.101-2',125.00,true,'Padrão'),
+	 (140,8,2,'Endocrinologia','CONSULTA','1.01.01.01-2',162.21,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (141,9,2,'Endocrinologia','CONSULTA','1.00.00.07-7',164.43,true,'Padrão'),
+	 (142,10,2,'Endocrinologia','CONSULTA','1.01.01.01-2',151.53,true,'Padrão'),
+	 (143,11,2,'Endocrinologia','CONSULTA','99.02.050-4',146.86,true,'Padrão'),
+	 (144,12,2,'Endocrinologia','NÃO TISS ATENDIMENTO','1.01.01.012',120.64,true,'Padrão'),
+	 (145,14,2,'Endocrinologia','NÃO TISS ATENDIMENTO','00.01.001-4',152.77,true,'Padrão'),
+	 (146,15,2,'Endocrinologia','CONSULTA','1.01.01.01-2',169.37,true,'Padrão'),
+	 (147,16,2,'Endocrinologia','CONSULTA','1.01.01.01-2',156.10,true,'Padrão'),
+	 (148,17,2,'Endocrinologia','CONSULTA','1.01.01.01-2',174.17,true,'Padrão'),
+	 (149,18,2,'Endocrinologia','CONSULTA','1.01.01.01-2',154.66,true,'Padrão'),
+	 (150,19,2,'Endocrinologia','CONSULTA','1.01.01.01-2',95.35,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (151,20,2,'Endocrinologia','CONSULTA','10.10.101-2',130.85,true,'Padrão'),
+	 (152,21,2,'Endocrinologia','NÃO TISS - ATENDIMENTO','00.01.001-4',153.74,true,'Padrão'),
+	 (153,22,2,'Endocrinologia','CONSULTA','1.01.01.01-2',146.63,true,'Padrão'),
+	 (154,23,2,'Endocrinologia','CONSULTA','1.01.01.01-2',147.05,true,'Padrão'),
+	 (155,24,2,'Endocrinologia','SP/SADT','1.01.01.01-2',109.00,true,'Padrão'),
+	 (156,25,2,'Endocrinologia','CONSULTA','70.00.000-1',129.97,true,'Padrão'),
+	 (157,26,2,'Endocrinologia','CONSULTA','70.01.073-1',142.17,true,'Padrão'),
+	 (158,27,2,'Endocrinologia','SP/SADT','700.01.073-1',160.85,true,'Padrão'),
+	 (159,28,2,'Endocrinologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (160,29,2,'Endocrinologia','SP/SADT','10.10.140-3',120.64,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (161,30,2,'Endocrinologia','CONSULTA','1.01.01.01-2',137.33,true,'Padrão'),
+	 (162,31,2,'Endocrinologia','SP/SADT','70.00.107-31',160.85,true,'Padrão'),
+	 (163,32,2,'Endocrinologia','CONSULTA','90.05.030-4',160.85,true,'Padrão'),
+	 (164,33,2,'Endocrinologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (165,34,2,'Endocrinologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (166,35,2,'Endocrinologia','CONSULTA','1.01.01.01-2',120.00,true,'Padrão'),
+	 (167,36,2,'Endocrinologia','CONSULTA','1.01.01.01-2',100.00,true,'Padrão'),
+	 (168,37,2,'Endocrinologia','CONSULTA','1.01.01.01-2',139.06,true,'Padrão'),
+	 (169,38,2,'Endocrinologia','SP/SADT','0.00.10.73-1',144.24,true,'Padrão'),
+	 (170,39,2,'Endocrinologia','CONSULTA','1.01.01.01-2',165.86,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (171,40,2,'Endocrinologia','CONSULTA','00.01.073-1',148.69,true,'Padrão'),
+	 (172,41,2,'Endocrinologia','SP/SADT','00.01.073-1',160.85,true,'Padrão'),
+	 (173,42,2,'Endocrinologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (174,43,2,'Endocrinologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (175,44,2,'Endocrinologia','CONSULTA','9.30.10.02-0',160.85,true,'Padrão'),
+	 (176,45,2,'Endocrinologia','CONSULTA','1.01.01.01-2',143.08,true,'Padrão'),
+	 (221,1,3,'Angiologia','NÃO TISS - ATENDIMENTO','00.01.001-4',143.94,true,'Padrão'),
+	 (222,2,3,'Angiologia','CONSULTA','1.01.01.01-2',135.06,true,'Padrão'),
+	 (223,3,3,'Angiologia','CONSULTA','1.01.01.01-2',95.94,true,'Padrão'),
+	 (224,4,3,'Angiologia','CONSULTA','1.01.01.403',139.09,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (225,5,3,'Angiologia','CONSULTA','1.01.01.01-2',141.35,true,'Padrão'),
+	 (226,6,3,'Angiologia','CONSULTA','1.01.01.01-2',128.87,true,'Padrão'),
+	 (227,7,3,'Angiologia','CONSULTA','10.10.101-2',112.50,true,'Padrão'),
+	 (228,8,3,'Angiologia','CONSULTA','1.01.01.01-2',145.99,true,'Padrão'),
+	 (229,9,3,'Angiologia','CONSULTA','1.00.00.07-7',147.99,true,'Padrão'),
+	 (230,10,3,'Angiologia','CONSULTA','1.01.01.01-2',136.38,true,'Padrão'),
+	 (231,11,3,'Angiologia','CONSULTA','99.02.050-4',132.17,true,'Padrão'),
+	 (232,12,3,'Angiologia','NÃO TISS ATENDIMENTO','1.01.01.012',108.58,true,'Padrão'),
+	 (233,14,3,'Angiologia','NÃO TISS ATENDIMENTO','00.01.001-4',137.49,true,'Padrão'),
+	 (234,15,3,'Angiologia','CONSULTA','1.01.01.01-2',152.43,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (235,16,3,'Angiologia','CONSULTA','1.01.01.01-2',140.49,true,'Padrão'),
+	 (236,17,3,'Angiologia','CONSULTA','1.01.01.01-2',156.75,true,'Padrão'),
+	 (237,18,3,'Angiologia','CONSULTA','1.01.01.01-2',139.19,true,'Padrão'),
+	 (238,19,3,'Angiologia','CONSULTA','1.01.01.01-2',85.82,true,'Padrão'),
+	 (239,20,3,'Angiologia','CONSULTA','10.10.101-2',117.77,true,'Padrão'),
+	 (240,21,3,'Angiologia','NÃO TISS - ATENDIMENTO','00.01.001-4',138.37,true,'Padrão'),
+	 (241,22,3,'Angiologia','CONSULTA','1.01.01.01-2',131.97,true,'Padrão'),
+	 (242,23,3,'Angiologia','CONSULTA','1.01.01.01-2',132.35,true,'Padrão'),
+	 (243,24,3,'Angiologia','SP/SADT','1.01.01.01-2',98.10,true,'Padrão'),
+	 (244,25,3,'Angiologia','CONSULTA','70.00.000-1',116.97,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (245,26,3,'Angiologia','CONSULTA','70.01.073-1',127.95,true,'Padrão'),
+	 (246,27,3,'Angiologia','SP/SADT','700.01.073-1',144.77,true,'Padrão'),
+	 (247,28,3,'Angiologia','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (248,29,3,'Angiologia','SP/SADT','10.10.140-3',108.58,true,'Padrão'),
+	 (249,30,3,'Angiologia','CONSULTA','1.01.01.01-2',123.60,true,'Padrão'),
+	 (250,31,3,'Angiologia','SP/SADT','70.00.107-31',144.77,true,'Padrão'),
+	 (251,32,3,'Angiologia','CONSULTA','90.05.030-4',144.77,true,'Padrão'),
+	 (252,33,3,'Angiologia','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (253,34,3,'Angiologia','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (254,35,3,'Angiologia','CONSULTA','1.01.01.01-2',108.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (255,36,3,'Angiologia','CONSULTA','1.01.01.01-2',90.00,true,'Padrão'),
+	 (256,37,3,'Angiologia','CONSULTA','1.01.01.01-2',125.15,true,'Padrão'),
+	 (257,38,3,'Angiologia','SP/SADT','0.00.10.73-1',129.82,true,'Padrão'),
+	 (258,39,3,'Angiologia','CONSULTA','1.01.01.01-2',149.27,true,'Padrão'),
+	 (259,40,3,'Angiologia','CONSULTA','00.01.073-1',133.82,true,'Padrão'),
+	 (260,41,3,'Angiologia','SP/SADT','00.01.073-1',144.77,true,'Padrão'),
+	 (261,42,3,'Angiologia','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (262,43,3,'Angiologia','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (263,44,3,'Angiologia','CONSULTA','9.30.10.02-0',144.77,true,'Padrão'),
+	 (264,45,3,'Angiologia','CONSULTA','1.01.01.01-2',128.77,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (265,1,4,'Cirurgia Vascular','NÃO TISS - ATENDIMENTO','00.01.001-4',143.94,true,'Padrão'),
+	 (266,2,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',135.06,true,'Padrão'),
+	 (267,3,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',95.94,true,'Padrão'),
+	 (268,4,4,'Cirurgia Vascular','CONSULTA','1.01.01.403',139.09,true,'Padrão'),
+	 (269,5,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',141.35,true,'Padrão'),
+	 (270,6,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',128.87,true,'Padrão'),
+	 (271,7,4,'Cirurgia Vascular','CONSULTA','10.10.101-2',112.50,true,'Padrão'),
+	 (272,8,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',145.99,true,'Padrão'),
+	 (273,9,4,'Cirurgia Vascular','CONSULTA','1.00.00.07-7',147.99,true,'Padrão'),
+	 (274,10,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',136.38,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (275,11,4,'Cirurgia Vascular','CONSULTA','99.02.050-4',132.17,true,'Padrão'),
+	 (276,12,4,'Cirurgia Vascular','NÃO TISS ATENDIMENTO','1.01.01.012',108.58,true,'Padrão'),
+	 (277,14,4,'Cirurgia Vascular','NÃO TISS ATENDIMENTO','00.01.001-4',137.49,true,'Padrão'),
+	 (278,15,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',152.43,true,'Padrão'),
+	 (279,16,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',140.49,true,'Padrão'),
+	 (280,17,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',156.75,true,'Padrão'),
+	 (281,18,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',139.19,true,'Padrão'),
+	 (282,19,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',85.82,true,'Padrão'),
+	 (283,20,4,'Cirurgia Vascular','CONSULTA','10.10.101-2',117.77,true,'Padrão'),
+	 (284,21,4,'Cirurgia Vascular','NÃO TISS - ATENDIMENTO','00.01.001-4',138.37,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (285,22,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',131.97,true,'Padrão'),
+	 (286,23,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',132.35,true,'Padrão'),
+	 (287,24,4,'Cirurgia Vascular','SP/SADT','1.01.01.01-2',98.10,true,'Padrão'),
+	 (288,25,4,'Cirurgia Vascular','CONSULTA','70.00.000-1',116.97,true,'Padrão'),
+	 (289,26,4,'Cirurgia Vascular','CONSULTA','70.01.073-1',127.95,true,'Padrão'),
+	 (290,27,4,'Cirurgia Vascular','SP/SADT','700.01.073-1',144.77,true,'Padrão'),
+	 (291,28,4,'Cirurgia Vascular','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (292,29,4,'Cirurgia Vascular','SP/SADT','10.10.140-3',108.58,true,'Padrão'),
+	 (293,30,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',123.60,true,'Padrão'),
+	 (294,31,4,'Cirurgia Vascular','SP/SADT','70.00.107-31',144.77,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (295,32,4,'Cirurgia Vascular','CONSULTA','90.05.030-4',144.77,true,'Padrão'),
+	 (296,33,4,'Cirurgia Vascular','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (297,34,4,'Cirurgia Vascular','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (298,35,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',108.00,true,'Padrão'),
+	 (299,36,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',90.00,true,'Padrão'),
+	 (300,37,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',125.15,true,'Padrão'),
+	 (301,38,4,'Cirurgia Vascular','SP/SADT','0.00.10.73-1',129.82,true,'Padrão'),
+	 (302,39,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',149.27,true,'Padrão'),
+	 (303,40,4,'Cirurgia Vascular','CONSULTA','00.01.073-1',133.82,true,'Padrão'),
+	 (304,41,4,'Cirurgia Vascular','SP/SADT','00.01.073-1',144.77,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (305,42,4,'Cirurgia Vascular','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (306,43,4,'Cirurgia Vascular','SP/SADT','90.05.030-4',144.77,true,'Padrão'),
+	 (307,44,4,'Cirurgia Vascular','CONSULTA','9.30.10.02-0',144.77,true,'Padrão'),
+	 (308,45,4,'Cirurgia Vascular','CONSULTA','1.01.01.01-2',128.77,true,'Padrão'),
+	 (177,1,1,'Cardiologia','NÃO TISS - ATENDIMENTO','00.01.001-4',159.93,true,'Padrão'),
+	 (178,2,1,'Cardiologia','CONSULTA','1.01.01.01-2',150.07,true,'Padrão'),
+	 (179,3,1,'Cardiologia','CONSULTA','1.01.01.01-2',106.60,true,'Padrão'),
+	 (180,4,1,'Cardiologia','CONSULTA','1.01.01.403',154.54,true,'Padrão'),
+	 (181,5,1,'Cardiologia','CONSULTA','1.01.01.01-2',157.06,true,'Padrão'),
+	 (182,6,1,'Cardiologia','CONSULTA','1.01.01.01-2',143.19,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (183,7,1,'Cardiologia','CONSULTA','10.10.101-2',125.00,true,'Padrão'),
+	 (184,8,1,'Cardiologia','CONSULTA','1.01.01.01-2',162.21,true,'Padrão'),
+	 (185,9,1,'Cardiologia','CONSULTA','1.00.00.07-7',164.43,true,'Padrão'),
+	 (186,10,1,'Cardiologia','CONSULTA','1.01.01.01-2',151.53,true,'Padrão'),
+	 (187,11,1,'Cardiologia','CONSULTA','99.02.050-4',146.86,true,'Padrão'),
+	 (188,12,1,'Cardiologia','NÃO TISS ATENDIMENTO','1.01.01.012',120.64,true,'Padrão'),
+	 (189,14,1,'Cardiologia','NÃO TISS ATENDIMENTO','00.01.001-4',152.77,true,'Padrão'),
+	 (190,15,1,'Cardiologia','CONSULTA','1.01.01.01-2',169.37,true,'Padrão'),
+	 (191,16,1,'Cardiologia','CONSULTA','1.01.01.01-2',156.10,true,'Padrão'),
+	 (192,17,1,'Cardiologia','CONSULTA','1.01.01.01-2',174.17,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (193,18,1,'Cardiologia','CONSULTA','1.01.01.01-2',154.66,true,'Padrão'),
+	 (194,19,1,'Cardiologia','CONSULTA','1.01.01.01-2',95.35,true,'Padrão'),
+	 (195,20,1,'Cardiologia','CONSULTA','10.10.101-2',130.85,true,'Padrão'),
+	 (196,21,1,'Cardiologia','NÃO TISS - ATENDIMENTO','00.01.001-4',153.74,true,'Padrão'),
+	 (197,22,1,'Cardiologia','CONSULTA','1.01.01.01-2',146.63,true,'Padrão'),
+	 (198,23,1,'Cardiologia','CONSULTA','1.01.01.01-2',147.05,true,'Padrão'),
+	 (199,24,1,'Cardiologia','SP/SADT','1.01.01.01-2',109.00,true,'Padrão'),
+	 (200,25,1,'Cardiologia','CONSULTA','70.00.000-1',129.97,true,'Padrão'),
+	 (201,26,1,'Cardiologia','CONSULTA','70.01.073-1',142.17,true,'Padrão'),
+	 (202,27,1,'Cardiologia','SP/SADT','700.01.073-1',160.85,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (203,28,1,'Cardiologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (204,29,1,'Cardiologia','SP/SADT','10.10.140-3',120.64,true,'Padrão'),
+	 (205,30,1,'Cardiologia','CONSULTA','1.01.01.01-2',137.33,true,'Padrão'),
+	 (206,31,1,'Cardiologia','SP/SADT','70.00.107-31',160.85,true,'Padrão'),
+	 (207,32,1,'Cardiologia','CONSULTA','90.05.030-4',160.85,true,'Padrão'),
+	 (208,33,1,'Cardiologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (209,34,1,'Cardiologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (210,35,1,'Cardiologia','CONSULTA','1.01.01.01-2',120.00,true,'Padrão'),
+	 (211,36,1,'Cardiologia','CONSULTA','1.01.01.01-2',100.00,true,'Padrão'),
+	 (212,37,1,'Cardiologia','CONSULTA','1.01.01.01-2',139.06,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (213,38,1,'Cardiologia','SP/SADT','0.00.10.73-1',144.24,true,'Padrão'),
+	 (214,39,1,'Cardiologia','CONSULTA','1.01.01.01-2',165.86,true,'Padrão'),
+	 (215,40,1,'Cardiologia','CONSULTA','00.01.073-1',148.69,true,'Padrão'),
+	 (216,41,1,'Cardiologia','SP/SADT','00.01.073-1',160.85,true,'Padrão'),
+	 (217,42,1,'Cardiologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (218,43,1,'Cardiologia','SP/SADT','90.05.030-4',160.85,true,'Padrão'),
+	 (219,44,1,'Cardiologia','CONSULTA','9.30.10.02-0',160.85,true,'Padrão'),
+	 (220,45,1,'Cardiologia','CONSULTA','1.01.01.01-2',143.08,true,'Padrão'),
+	 (309,1,5,'Nutrição','NÃO TISS - ATENDIMENTO','70.99.011-5',97.74,true,'Padrão'),
+	 (310,2,5,'Nutrição','SP/SADT','50.00.056-0',86.45,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (311,3,5,'Nutrição','SP/SADT','5.00.00.56-0',73.78,true,'Padrão'),
+	 (312,4,5,'Nutrição','SP/SADT','5.00.00.56-0',110.00,true,'Padrão'),
+	 (313,5,5,'Nutrição','SP/SADT','5.00.00.56-0',82.37,true,'Padrão'),
+	 (314,7,5,'Nutrição','SP/SADT','5.00.00.56-0',63.18,true,'Padrão'),
+	 (315,9,5,'Nutrição','CONSULTA','1.00.10.05-6',93.54,true,'Padrão'),
+	 (316,10,5,'Nutrição','SP/SADT','50.00.056-0',88.32,true,'Padrão'),
+	 (317,11,5,'Nutrição','SP/SADT','50.00.056-0',59.91,true,'Padrão'),
+	 (318,15,5,'Nutrição','CONSULTA','50.00.069-1',81.57,true,'Padrão'),
+	 (319,16,5,'Nutrição','CONSULTA','5.00.00.56-0',90.98,true,'Padrão'),
+	 (320,18,5,'Nutrição','CONSULTA','1.01.01.01-2',80.01,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (321,19,5,'Nutrição','SP/SADT','50.00.056-0',49.59,true,'Padrão'),
+	 (322,22,5,'Nutrição','SP/SADT','50.00.056-0',82.08,true,'Padrão'),
+	 (323,25,5,'Nutrição','SP/SADT','50.00.056-0',69.68,true,'Padrão'),
+	 (324,26,5,'Nutrição','SP/SADT','50.00.056-0',66.00,true,'Padrão'),
+	 (325,27,5,'Nutrição','SP/SADT','17.01.001-1',75.93,true,'Padrão'),
+	 (326,28,5,'Nutrição','SP/SADT','90.05.022-3',121.34,true,'Padrão'),
+	 (327,30,5,'Nutrição','SP/SADT','50.00.056-0',77.57,true,'Padrão'),
+	 (328,31,5,'Nutrição','SP/SADT','17.01.001-1',75.93,true,'Padrão'),
+	 (329,32,5,'Nutrição','SP/SADT','90.05.022-3',118.42,true,'Padrão'),
+	 (330,34,5,'Nutrição','SP/SADT','90.05.022-3',121.34,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (331,35,5,'Nutrição','SP/SADT','50.00.056-0',52.00,true,'Padrão'),
+	 (332,36,5,'Nutrição','SP/SADT','50.00.056-0',45.00,true,'Padrão'),
+	 (333,37,5,'Nutrição','SP/SADT','50.00.056-0',84.17,true,'Padrão'),
+	 (334,39,5,'Nutrição','SP/SADT','50.00.056-0',85.05,true,'Padrão'),
+	 (335,40,5,'Nutrição','SP/SADT','17.01.001-1',82.63,true,'Padrão'),
+	 (336,41,5,'Nutrição','SP/SADT','5.00.00.56-0',118.44,true,'Padrão'),
+	 (337,42,5,'Nutrição','SP/SADT','90.05.022-3',121.34,true,'Padrão'),
+	 (338,43,5,'Nutrição','SP/SADT','90.05.022-3',121.34,true,'Padrão'),
+	 (339,44,5,'Nutrição','CONSULTA','90.05.022-3',121.34,true,'Padrão'),
+	 (340,45,5,'Nutrição','SP/SADT','50.00.056-0',73.33,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (341,1,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (342,2,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (343,3,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (344,4,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (345,5,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (346,6,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (347,7,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (348,8,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (349,9,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (350,10,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (351,11,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (352,12,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (353,14,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (354,15,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (355,16,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (356,17,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (357,18,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (358,19,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (359,20,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (360,21,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (361,22,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (362,23,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (363,24,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (364,25,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (365,26,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (366,27,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (367,28,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (368,29,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (369,30,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (370,31,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (371,32,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (372,33,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (373,34,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (374,35,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (375,36,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (376,37,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (377,38,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (378,39,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (379,40,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (380,41,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (381,42,9,'Exames','SP/SADT',NULL,460.00,true,'Padrão'),
+	 (382,43,9,'Exames','SP/SADT',NULL,470.00,true,'Padrão'),
+	 (383,44,9,'Exames','SP/SADT',NULL,430.00,true,'Padrão'),
+	 (384,45,9,'Exames','SP/SADT',NULL,440.00,true,'Padrão'),
+	 (385,1,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (386,2,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (387,3,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (388,4,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (389,5,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (390,6,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (391,7,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (392,8,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (393,9,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (394,10,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (395,11,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (396,12,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (397,14,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (398,15,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (399,16,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (400,17,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (401,18,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (402,19,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (403,20,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (404,21,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (405,22,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (406,23,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (407,24,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (408,25,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (409,26,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (410,27,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (411,28,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (412,29,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (413,30,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (414,31,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (415,32,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (416,33,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (417,34,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (418,35,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (419,36,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (420,37,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (421,38,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (422,39,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (423,40,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (424,41,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (425,42,10,'Exames','SP/SADT',NULL,255.00,true,'Padrão'),
+	 (426,43,10,'Exames','SP/SADT',NULL,260.00,true,'Padrão'),
+	 (427,44,10,'Exames','SP/SADT',NULL,240.00,true,'Padrão'),
+	 (428,45,10,'Exames','SP/SADT',NULL,245.00,true,'Padrão'),
+	 (429,1,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (430,2,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (431,3,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (432,4,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (433,5,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (434,6,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (435,7,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (436,8,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (437,9,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (438,10,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (439,11,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (440,12,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (441,14,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (442,15,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (443,16,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (444,17,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (445,18,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (446,19,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (447,20,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (448,21,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (449,22,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (450,23,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (451,24,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (452,25,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (453,26,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (454,27,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (455,28,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (456,29,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (457,30,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (458,31,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (459,32,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (460,33,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (461,34,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (462,35,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (463,36,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (464,37,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (465,38,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (466,39,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão'),
+	 (467,40,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (468,41,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (469,42,11,'Exames','SP/SADT',NULL,330.00,true,'Padrão'),
+	 (470,43,11,'Exames','SP/SADT',NULL,340.00,true,'Padrão');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (471,44,11,'Exames','SP/SADT',NULL,310.00,true,'Padrão'),
+	 (472,45,11,'Exames','SP/SADT',NULL,320.00,true,'Padrão'),
+	 (473,1,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples'),
+	 (474,1,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (475,1,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo'),
+	 (476,2,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (477,2,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (478,2,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo'),
+	 (479,3,13,'Enfermagem','SP/SADT',NULL,210.00,true,'Curativo simples'),
+	 (480,3,13,'Enfermagem','SP/SADT',NULL,700.00,true,'Curativo intermediário');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (481,3,13,'Enfermagem','SP/SADT',NULL,1600.00,true,'Curativo complexo'),
+	 (482,4,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (483,4,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário'),
+	 (484,4,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (485,5,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples'),
+	 (486,5,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (487,5,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (488,6,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples'),
+	 (489,6,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (490,6,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (491,7,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (492,7,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (493,7,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo'),
+	 (494,8,13,'Enfermagem','SP/SADT',NULL,210.00,true,'Curativo simples'),
+	 (495,8,13,'Enfermagem','SP/SADT',NULL,700.00,true,'Curativo intermediário'),
+	 (496,8,13,'Enfermagem','SP/SADT',NULL,1600.00,true,'Curativo complexo'),
+	 (497,9,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (498,9,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário'),
+	 (499,9,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (500,10,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (501,10,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (502,10,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (503,11,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples'),
+	 (504,11,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (505,11,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo'),
+	 (506,12,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (507,12,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (508,12,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo'),
+	 (509,14,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (510,14,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (511,14,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (512,15,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples'),
+	 (513,15,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (514,15,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (515,16,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples'),
+	 (516,16,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (517,16,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo'),
+	 (518,17,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (519,17,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (520,17,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (521,18,13,'Enfermagem','SP/SADT',NULL,210.00,true,'Curativo simples'),
+	 (522,18,13,'Enfermagem','SP/SADT',NULL,700.00,true,'Curativo intermediário'),
+	 (523,18,13,'Enfermagem','SP/SADT',NULL,1600.00,true,'Curativo complexo'),
+	 (524,19,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (525,19,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário'),
+	 (526,19,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (527,20,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples'),
+	 (528,20,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (529,20,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (530,21,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (531,21,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (532,21,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo'),
+	 (533,22,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (534,22,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (535,22,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo'),
+	 (536,23,13,'Enfermagem','SP/SADT',NULL,210.00,true,'Curativo simples'),
+	 (537,23,13,'Enfermagem','SP/SADT',NULL,700.00,true,'Curativo intermediário'),
+	 (538,23,13,'Enfermagem','SP/SADT',NULL,1600.00,true,'Curativo complexo'),
+	 (539,24,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (540,24,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (541,24,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (542,25,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples'),
+	 (543,25,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (544,25,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (545,26,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples'),
+	 (546,26,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (547,26,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo'),
+	 (548,27,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (549,27,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (550,27,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (551,28,13,'Enfermagem','SP/SADT',NULL,210.00,true,'Curativo simples'),
+	 (552,28,13,'Enfermagem','SP/SADT',NULL,700.00,true,'Curativo intermediário'),
+	 (553,28,13,'Enfermagem','SP/SADT',NULL,1600.00,true,'Curativo complexo'),
+	 (554,29,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (555,29,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário'),
+	 (556,29,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (557,30,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples'),
+	 (558,30,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (559,30,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (560,31,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (561,31,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (562,31,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo'),
+	 (563,32,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (564,32,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (565,32,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo'),
+	 (566,33,13,'Enfermagem','SP/SADT',NULL,210.00,true,'Curativo simples'),
+	 (567,33,13,'Enfermagem','SP/SADT',NULL,700.00,true,'Curativo intermediário'),
+	 (568,33,13,'Enfermagem','SP/SADT',NULL,1600.00,true,'Curativo complexo'),
+	 (569,34,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (570,34,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (571,34,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (572,35,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples'),
+	 (573,35,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (574,35,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (575,36,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples'),
+	 (576,36,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (577,36,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo'),
+	 (578,37,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (579,37,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (580,37,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (581,38,13,'Enfermagem','SP/SADT',NULL,210.00,true,'Curativo simples'),
+	 (582,38,13,'Enfermagem','SP/SADT',NULL,700.00,true,'Curativo intermediário'),
+	 (583,38,13,'Enfermagem','SP/SADT',NULL,1600.00,true,'Curativo complexo'),
+	 (584,39,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (585,39,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário'),
+	 (586,39,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (587,40,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples'),
+	 (588,40,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (589,40,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (590,41,13,'Enfermagem','SP/SADT',NULL,170.00,true,'Curativo simples');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (591,41,13,'Enfermagem','SP/SADT',NULL,500.00,true,'Curativo intermediário'),
+	 (592,41,13,'Enfermagem','SP/SADT',NULL,1200.00,true,'Curativo complexo'),
+	 (593,42,13,'Enfermagem','SP/SADT',NULL,190.00,true,'Curativo simples'),
+	 (594,42,13,'Enfermagem','SP/SADT',NULL,600.00,true,'Curativo intermediário'),
+	 (595,42,13,'Enfermagem','SP/SADT',NULL,1400.00,true,'Curativo complexo'),
+	 (596,43,13,'Enfermagem','SP/SADT',NULL,210.00,true,'Curativo simples'),
+	 (597,43,13,'Enfermagem','SP/SADT',NULL,700.00,true,'Curativo intermediário'),
+	 (598,43,13,'Enfermagem','SP/SADT',NULL,1600.00,true,'Curativo complexo'),
+	 (599,44,13,'Enfermagem','SP/SADT',NULL,230.00,true,'Curativo simples'),
+	 (600,44,13,'Enfermagem','SP/SADT',NULL,800.00,true,'Curativo intermediário');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (601,44,13,'Enfermagem','SP/SADT',NULL,1800.00,true,'Curativo complexo'),
+	 (602,45,13,'Enfermagem','SP/SADT',NULL,150.00,true,'Curativo simples'),
+	 (603,45,13,'Enfermagem','SP/SADT',NULL,400.00,true,'Curativo intermediário'),
+	 (604,45,13,'Enfermagem','SP/SADT',NULL,1000.00,true,'Curativo complexo'),
+	 (605,1,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (606,2,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (607,3,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (608,4,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (609,5,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (610,6,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (611,7,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (612,8,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (613,9,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (614,10,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (615,11,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (616,12,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (617,14,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (618,15,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (619,16,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (620,17,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (621,18,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (622,19,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (623,20,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (624,21,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (625,22,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (626,23,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (627,24,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (628,25,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (629,26,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (630,27,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (631,28,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (632,29,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (633,30,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (634,31,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (635,32,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (636,33,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (637,34,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (638,35,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (639,36,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (640,37,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento');
+INSERT INTO public.convenio_procedimentos (id,convenio_id,procedimento_id,especialidade,tipo_guia,codigo,valor_convenio,ativo,categoria) VALUES
+	 (641,38,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (642,39,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (643,40,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (644,41,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (645,42,14,'Enfermagem','SP/SADT',NULL,210.00,true,'Aplicação de medicamento'),
+	 (646,43,14,'Enfermagem','SP/SADT',NULL,220.00,true,'Aplicação de medicamento'),
+	 (647,44,14,'Enfermagem','SP/SADT',NULL,180.00,true,'Aplicação de medicamento'),
+	 (648,45,14,'Enfermagem','SP/SADT',NULL,190.00,true,'Aplicação de medicamento'),
+	 (649,8,5,'Nutrição',NULL,NULL,100.00,true,'Padrão');
+
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (1,87,'GUIA-00087','Particular','2026-12-05',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (2,74,'GUIA-00074','SP/SADT','2026-11-22',170.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (3,54,'GUIA-00054','Particular','2026-11-02',400.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (4,71,'GUIA-00071','SP/SADT','2026-11-19',230.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (5,68,'GUIA-00068','SP/SADT','2026-11-16',255.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (6,4,'GUIA-00004','SP/SADT','2026-10-06',234.07,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (7,51,'GUIA-00051','SP/SADT','2026-10-29',330.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (8,96,'GUIA-00096','SP/SADT','2026-12-14',220.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (9,70,'GUIA-00070','Particular','2026-11-18',300.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (10,52,'GUIA-00052','Particular','2026-10-30',400.00,'Recebido',NULL,0.00,'Atendimento particular');
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (11,80,'GUIA-00080','Particular','2026-11-28',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (12,67,'GUIA-00067','Particular','2026-11-15',400.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (13,83,'GUIA-00083','SP/SADT','2026-12-01',170.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (14,63,'GUIA-00063','SP/SADT','2026-11-11',340.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (15,90,'GUIA-00090','Particular','2026-12-08',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (16,10,'GUIA-00010','SP/SADT','2026-10-13',241.06,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (17,105,'GUIA-00105','Particular','2026-12-23',430.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (18,45,'GUIA-00045','SP/SADT','2026-10-23',460.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (19,107,'GUIA-00107','Particular','2026-12-25',430.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (20,6,'GUIA-00006','SP/SADT','2026-10-08',190.60,'Enviado',NULL,0.00,'Faturamento enviado ao convênio');
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (21,86,'GUIA-00086','SP/SADT','2026-12-04',190.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (22,92,'GUIA-00092','Particular','2026-12-10',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (23,93,'GUIA-00093','SP/SADT','2026-12-11',190.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (24,89,'GUIA-00089','SP/SADT','2026-12-07',220.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (25,101,'GUIA-00101','Particular','2026-12-19',630.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (26,50,'GUIA-00050','Particular','2026-10-28',400.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (27,115,'GUIA-00115','Particular','2027-01-03',380.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (28,114,'GUIA-00114','SP/SADT','2027-01-01',179.94,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (29,60,'GUIA-00060','Particular','2026-11-08',400.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (30,102,'GUIA-00102','SP/SADT','2026-12-20',228.77,'Enviado',NULL,0.00,'Faturamento enviado ao convênio');
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (31,97,'GUIA-00097','Particular','2026-12-15',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (32,66,'GUIA-00066','SP/SADT','2026-11-14',320.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (33,109,'GUIA-00109','Particular','2026-12-27',430.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (34,112,'GUIA-00112','SP/SADT','2026-12-30',219.06,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (35,108,'GUIA-00108','SP/SADT','2026-12-26',212.77,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (36,13,'GUIA-00013','Particular','2026-10-16',630.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (37,118,'GUIA-00118','SP/SADT','2027-01-06',166.37,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (38,65,'GUIA-00065','SP/SADT','2026-11-13',240.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (39,111,'GUIA-00111','Particular','2026-12-29',380.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (40,2,'GUIA-00002','SP/SADT','2026-10-03',243.93,'Enviado',NULL,0.00,'Faturamento enviado ao convênio');
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (41,124,'GUIA-00124','SP/SADT','2027-01-12',184.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (42,75,'GUIA-00075','Particular','2026-11-23',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (43,123,'GUIA-00123','Particular','2027-01-11',380.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (44,98,'GUIA-00098','SP/SADT','2026-12-16',180.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (45,42,'GUIA-00042','Particular','2026-10-20',400.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (46,117,'GUIA-00117','Particular','2027-01-05',380.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (47,121,'GUIA-00121','Particular','2027-01-09',380.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (48,82,'GUIA-00082','Particular','2026-11-30',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (49,41,'GUIA-00041','SP/SADT','2026-10-19',430.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (50,46,'GUIA-00046','Particular','2026-10-24',400.00,'Recebido',NULL,0.00,'Atendimento particular');
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (51,125,'GUIA-00125','Particular','2027-01-13',380.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (52,119,'GUIA-00119','Particular','2027-01-07',380.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (53,113,'GUIA-00113','Particular','2026-12-31',380.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (54,43,'GUIA-00043','SP/SADT','2026-10-21',320.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (55,9,'GUIA-00009','Particular','2026-10-11',630.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (56,100,'GUIA-00100','SP/SADT','2026-12-18',190.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (57,15,'GUIA-00015','Particular','2026-10-18',630.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (58,79,'GUIA-00079','SP/SADT','2026-11-27',230.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (59,12,'GUIA-00012','SP/SADT','2026-10-15',227.19,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (60,85,'GUIA-00085','Particular','2026-12-03',200.00,'Recebido',NULL,0.00,'Atendimento particular');
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (61,72,'GUIA-00072','Particular','2026-11-20',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (62,95,'GUIA-00095','Particular','2026-12-13',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (63,57,'GUIA-00057','SP/SADT','2026-11-05',240.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (64,61,'GUIA-00061','SP/SADT','2026-11-09',255.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (65,81,'GUIA-00081','SP/SADT','2026-11-29',150.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (66,77,'GUIA-00077','Particular','2026-11-25',200.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (67,122,'GUIA-00122','SP/SADT','2027-01-10',147.18,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (68,49,'GUIA-00049','SP/SADT','2026-10-27',430.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (69,47,'GUIA-00047','SP/SADT','2026-10-25',340.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (70,3,'GUIA-00003','Particular','2026-10-04',480.00,'Recebido',NULL,0.00,'Atendimento particular');
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (71,1,'GUIA-00001','Particular','2026-10-02',480.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (72,76,'GUIA-00076','SP/SADT','2026-11-24',190.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (73,5,'GUIA-00005','Particular','2026-10-07',480.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (74,106,'GUIA-00106','SP/SADT','2026-12-24',228.77,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (75,104,'GUIA-00104','SP/SADT','2026-12-22',228.77,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (76,64,'GUIA-00064','Particular','2026-11-12',400.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (77,55,'GUIA-00055','SP/SADT','2026-11-03',340.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (78,56,'GUIA-00056','Particular','2026-11-04',400.00,'Recebido',NULL,0.00,'Atendimento particular'),
+	 (79,91,'GUIA-00091','SP/SADT','2026-12-09',180.00,'Enviado',NULL,0.00,'Faturamento enviado ao convênio'),
+	 (80,58,'GUIA-00058','Particular','2026-11-06',300.00,'Recebido',NULL,0.00,'Atendimento particular');
+INSERT INTO public.faturamentos (id,atendimento_id,numero_guia,tipo_guia,data_envio,valor_enviado,status,data_retorno,valor_glosado,observacao) VALUES
+	 (81,8,'GUIA-00008','SP/SADT','2026-10-10',238.54,'Enviado',NULL,0.00,'Faturamento enviado ao convênio');
+
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (1,20,'2026-10-10',190.60,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (2,25,'2026-12-21',630.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (3,26,'2026-10-30',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (4,27,'2027-01-05',380.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (5,11,'2026-11-30',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (6,39,'2026-12-31',380.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (7,17,'2026-12-25',430.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (8,66,'2026-11-27',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (9,33,'2026-12-29',430.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (10,57,'2026-10-20',630.00,'Cartão ou Pix','Pagamento particular integral');
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (11,31,'2026-12-17',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (12,34,'2027-01-01',153.34,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (13,12,'2026-11-17',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (14,10,'2026-11-01',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (15,18,'2026-10-25',460.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (16,64,'2026-11-11',178.50,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (17,71,'2026-10-04',480.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (18,2,'2026-11-24',85.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (19,72,'2026-11-26',133.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (20,47,'2027-01-11',380.00,'Cartão ou Pix','Pagamento particular integral');
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (21,46,'2027-01-07',380.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (22,15,'2026-12-10',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (23,77,'2026-11-05',238.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (24,73,'2026-10-09',480.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (25,56,'2026-12-20',133.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (26,40,'2026-10-05',121.97,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (27,13,'2026-12-03',85.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (28,21,'2026-12-06',95.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (29,5,'2026-11-18',127.50,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (30,19,'2026-12-27',430.00,'Cartão ou Pix','Pagamento particular integral');
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (31,65,'2026-12-01',150.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (32,52,'2027-01-09',380.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (33,37,'2027-01-08',116.46,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (34,32,'2026-11-16',320.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (35,78,'2026-11-06',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (36,24,'2026-12-09',110.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (37,55,'2026-10-13',630.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (38,68,'2026-10-29',301.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (39,38,'2026-11-15',120.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (40,8,'2026-12-16',220.00,'Repasse de convênio','Recebimento integral ou parcial de convênio');
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (41,80,'2026-11-08',300.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (42,48,'2026-12-02',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (43,28,'2027-01-03',179.94,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (44,30,'2026-12-22',228.77,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (45,62,'2026-12-15',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (46,67,'2027-01-12',73.59,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (47,50,'2026-10-26',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (48,51,'2027-01-15',380.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (49,76,'2026-11-14',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (50,69,'2026-10-27',170.00,'Repasse de convênio','Recebimento integral ou parcial de convênio');
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (51,81,'2026-10-12',119.27,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (52,79,'2026-12-11',126.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (53,42,'2026-11-25',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (54,59,'2026-10-17',227.19,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (55,74,'2026-12-26',160.14,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (56,6,'2026-10-08',163.85,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (57,29,'2026-11-10',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (58,41,'2027-01-14',128.80,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (59,16,'2026-10-15',168.74,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (60,54,'2026-10-23',224.00,'Repasse de convênio','Recebimento integral ou parcial de convênio');
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (61,36,'2026-10-18',630.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (62,4,'2026-11-21',115.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (63,53,'2027-01-02',380.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (64,23,'2026-12-13',190.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (65,44,'2026-12-18',90.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (66,58,'2026-11-29',161.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (67,1,'2026-12-07',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (68,49,'2026-10-21',215.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (69,22,'2026-12-12',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (70,70,'2026-10-06',480.00,'Cartão ou Pix','Pagamento particular integral');
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (71,45,'2026-10-22',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (72,60,'2026-12-05',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (73,75,'2026-12-24',114.39,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (74,43,'2027-01-13',380.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (75,3,'2026-11-04',400.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (76,61,'2026-11-22',200.00,'Cartão ou Pix','Pagamento particular integral'),
+	 (77,14,'2026-11-13',340.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (78,35,'2026-12-28',212.77,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (79,63,'2026-11-07',240.00,'Repasse de convênio','Recebimento integral ou parcial de convênio'),
+	 (80,9,'2026-11-20',300.00,'Cartão ou Pix','Pagamento particular integral');
+INSERT INTO public.recebimentos (id,faturamento_id,data_recebimento,valor_recebido,forma_pagamento,observacao) VALUES
+	 (81,7,'2026-10-31',330.00,'Repasse de convênio','Recebimento integral ou parcial de convênio');
+
+INSERT INTO public.despesas (id,categoria_id,descricao,data_despesa,valor,data_vencimento,data_pagamento,status) VALUES
+	 (1,1,'Aluguel da clínica - Novembro','2026-11-01',4500.00,'2026-11-05','2026-11-05','Pago'),
+	 (2,2,'Conta de energia - Novembro','2026-11-05',680.00,'2026-11-15','2026-11-14','Pago'),
+	 (3,3,'Conta de água - Novembro','2026-11-05',210.00,'2026-11-15',NULL,'Pendente'),
+	 (4,4,'Internet e telefone - Novembro','2026-11-01',180.00,'2026-11-10','2026-11-10','Pago'),
+	 (5,5,'Materiais médicos de uso geral','2026-11-03',850.00,'2026-11-12','2026-11-12','Pago'),
+	 (6,6,'Gazes, ataduras e curativos','2026-11-04',1250.00,'2026-11-18',NULL,'Pendente'),
+	 (7,6,'Luvas e soluções para curativos','2026-11-08',620.00,'2026-11-20',NULL,'Pendente'),
+	 (8,7,'Seringas e agulhas','2026-11-06',480.00,'2026-11-16','2026-11-16','Pago'),
+	 (9,7,'Medicamentos para aplicações','2026-11-09',1650.00,'2026-11-22',NULL,'Pendente'),
+	 (10,8,'Salários dos profissionais - Novembro','2026-11-05',18000.00,'2026-11-30',NULL,'Pendente');
+INSERT INTO public.despesas (id,categoria_id,descricao,data_despesa,valor,data_vencimento,data_pagamento,status) VALUES
+	 (11,9,'Encargos trabalhistas - Novembro','2026-11-05',4200.00,'2026-11-30',NULL,'Pendente'),
+	 (12,10,'Produtos de limpeza','2026-11-07',350.00,'2026-11-17','2026-11-17','Pago'),
+	 (13,11,'Manutenção de equipamentos','2026-11-10',750.00,'2026-11-25',NULL,'Pendente'),
+	 (14,12,'Materiais administrativos','2026-11-11',230.00,'2026-11-21','2026-11-17','Pago');
+
